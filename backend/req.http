@@ -1,0 +1,22 @@
+
+### Get All Stats
+GET http://localhost:5000/api/stats
+
+### Get All Jobs 
+GET http://localhost:5000/api/jobs
+
+### Start a New Crawl Job
+POST http://localhost:5000/api/jobs
+Content-Type: application/json
+
+{
+    "seedUrl":"http://wikipedia.org",
+    "depth":2,
+    "maxPages":10
+}
+
+### Get All Pages
+GET http://localhost:5000/api/pages
+
+### Get Stats for specific job
+GET http://localhost:5000/api/stats/job/6a0c3411309bead36746a2dd
