@@ -3,8 +3,8 @@ import axios from 'axios'
 import { io } from 'socket.io-client'
 import StatCard from '../components/StatCard'
 
-const socket = io('http://localhost:5000')
-const API = 'http://localhost:5000/api'
+const socket = io('https://distributed-web-crawler-nchn.onrender.com')
+const API = 'https://distributed-web-crawler-nchn.onrender.com/api'
 
 function Dashboard() {
 

@@ -17,7 +17,7 @@ const PORT=process.env.PORT || 5000;
 // create HTTP server and Socket.io
 const httpServer = createServer(app);
 export const io=new Server(httpServer, {
-    cors: {origin: '*'}
+    cors: {origin: ' https://distributed-web-crawler-nchn.onrender.com',credentials: true}
 });
 
 // Socket.io Connection 
@@ -62,4 +62,3 @@ app.get("/",(req,res)=>{
 httpServer.listen(PORT,()=>{
     console.log(`Server running on http://localhost:${PORT}`);
 })
-
