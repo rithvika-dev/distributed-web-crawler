@@ -7,13 +7,7 @@ function StatCard({ title, value, icon, background, color }) {
   // color     → number text color
 
   return (
-    <div style={{
-      background: 'white',
-      borderRadius: '16px',
-      padding: '24px',
-      border: '1px solid lightgray',
-      boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
-    }}>
+    <div className="stat-card">
 
       {/* Icon Box */}
       <div style={{

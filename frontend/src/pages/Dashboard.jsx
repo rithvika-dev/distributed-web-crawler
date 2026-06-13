@@ -102,12 +102,7 @@ function Dashboard() {
       </div>
 
       {/* Stats Grid */}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        gap: '16px',
-        marginBottom: '32px'
-      }}>
+      <div className="stats-grid">
         <StatCard title="Pages Crawled" value={stats.totalPages}  />
         <StatCard title="Links Found" value={stats.totalLinks}  />
         <StatCard title="Total Jobs" value={stats.totalJobs}   />
@@ -117,11 +112,7 @@ function Dashboard() {
       </div>
 
       {/* Bottom Two Columns */}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: '350px 1fr',
-        gap: '24px'
-      }}>
+      <div className="dashboard-layout">
 
         {/* Start Crawl Form */}
         <div style={{
@@ -275,7 +266,8 @@ function Dashboard() {
               <div style={{ fontSize: '13px' }}>Start a crawl job using the form</div>
             </div>
           ) : (
-            <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+            <div className="table-responsive">
+              <table style={{ width: '100%', borderCollapse: 'collapse' }}>
               <thead>
                 <tr style={{ background: 'whitesmoke' }}>
                   {['Title', 'URL', 'Status', 'Links'].map(h => (
@@ -347,6 +339,7 @@ function Dashboard() {
                 ))}
               </tbody>
             </table>
+            </div>
           )}
         </div>
       </div>

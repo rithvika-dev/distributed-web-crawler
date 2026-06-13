@@ -10,23 +10,15 @@ function Navbar() {
   ]
 
   return (
-    <nav style={{
-      background: 'white',
-      padding: '16px 32px',
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      borderBottom: '2px solid lightgray',
-      //boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
-    }}>
+    <nav className="navbar">
 
       {/* Logo */}
-      <h2 style={{ margin: 0, color: 'royalblue', fontSize: '20px' }}>
+      <h2 className="navbar-logo" style={{ margin: 0, color: 'royalblue', fontSize: '20px' }}>
         WebCrawler
       </h2>
 
       {/* Links */}
-      <div style={{ display: 'flex', gap: '8px' }}>
+      <div className="navbar-links">
         {links.map((link) => {
           const isActive = location.pathname === link.path
           return (
@@ -50,14 +42,7 @@ function Navbar() {
       </div>
 
       {/* Status */}
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: '6px',
-        fontSize: '13px',
-        color: 'green',
-        fontWeight: '600'
-      }}>
+      <div className="navbar-status">
         <div style={{
           width: '8px',
           height: '8px',

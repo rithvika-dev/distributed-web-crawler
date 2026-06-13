@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Dashboard from './pages/Dashboard'
 import Jobs from './pages/Jobs'
 import Results from './pages/Results'
+import './App.css'
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         fontFamily: "'Segoe UI', sans-serif"
       }}>
         <Navbar />
-        <div style={{ maxWidth: '1300px', margin: '0 auto', padding: '32px 24px' }}>
+        <div className="app-container">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/jobs" element={<Jobs />} />

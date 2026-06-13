@@ -106,7 +106,8 @@ function Jobs() {
           </div>
 
         ) : (
-          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+          <div className="table-responsive">
+            <table style={{ width: '100%', borderCollapse: 'collapse' }}>
 
             {/* Table Head */}
             <thead>
@@ -268,6 +269,7 @@ function Jobs() {
               ))}
             </tbody>
           </table>
+          </div>
         )}
       </div>
     </div>

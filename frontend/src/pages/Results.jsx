@@ -50,12 +50,7 @@ function Results() {
       </div>
 
       {/* Search + Count Bar */}
-      <div style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        marginBottom: '20px'
-      }}>
+      <div className="results-header-bar">
 
         {/* Search Input */}
         <input
@@ -63,14 +58,7 @@ function Results() {
           placeholder="Search by URL or title..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          style={{
-            width: '320px',
-            padding: '10px 16px',
-            borderRadius: '8px',
-            border: '1.5px solid lightgray',
-            fontSize: '13px',
-            outline: 'none'
-          }}
+          className="results-search-input"
         />
 
         {/* Total Count */}
@@ -119,7 +107,8 @@ function Results() {
           </div>
 
         ) : (
-          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+          <div className="table-responsive">
+            <table style={{ width: '100%', borderCollapse: 'collapse' }}>
 
             {/* Table Head */}
             <thead>
@@ -247,9 +236,10 @@ function Results() {
 
                 </tr>
               ))}
-            </tbody>
-          </table>
-        )}
+              </tbody>
+            </table>
+          </div>
+          )}
       </div>
     </div>
   )
