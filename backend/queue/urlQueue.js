@@ -4,8 +4,9 @@ import Job from '../models/Job.js';
 
 // ── Redis Connection Config ───────────────────────────
 const redisConnection = {
-  host: process.env.REDIS_HOST || 'localhost',
-  port: process.env.REDIS_PORT || 6379
+  // host: process.env.REDIS_HOST || 'localhost',
+  // port: process.env.REDIS_PORT || 6379
+  url: process.env.REDIS_URL // Optional: Use REDIS_URL if provided
 };
 
 // ── Create the Queue ──────────────────────────────────
